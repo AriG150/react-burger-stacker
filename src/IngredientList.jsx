@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 
 const IngredientList = props => {
   var mappedIngredients = props.allIngredients.map((ingredient, id) => 
-    <li key={id}>{ingredient.name} <button>Add!</button></li>)
+    <li key={id}>{ingredient.name} < button name={ingredient.name} onClick={props.onClick} >></button></li>)
   return(
     <ul>
       {mappedIngredients}

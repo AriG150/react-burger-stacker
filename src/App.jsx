@@ -5,14 +5,25 @@ import './App.css';
 
 class App extends Component{
   state = {
-    ingredients: this.props.ingredients,
     stack: []
   }
+
+  handleClick = (e) => {
+    console.log(e.target.name)
+    e.preventDefault()
+    const stackCopy = [...this.state.stack]
+    stackCopy.unshift(this.props.ingredients.name)
+    
+    this.setState({
+      stack: stackCopy
+    })
+  }
+
   render(){
     return(
       <div className="App">
-        <BurgerPane />
-        <IngredientList allIngredients={this.state.ingredients} />
+        <BurgerPane  />
+        <IngredientList allIngredients={this.props.ingredients} onClick={this.handleClick} />
       </div>
     )
   }
