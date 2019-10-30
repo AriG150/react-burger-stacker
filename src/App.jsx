@@ -13,17 +13,23 @@ class App extends Component{
     console.log(e.target.name)
     const stackCopy = [...this.state.stack]
     stackCopy.unshift(this.state.ingredients[id])
-
     this.setState({
       stack: stackCopy
+    })
+  }
+
+  handleClear = (e) => {
+    console.log("does this work?")
+    this.setState({
+      stack: []
     })
   }
 
   render(){
     return(
       <div className="App">
-        <IngredientList allIngredients={this.state.ingredients} onClick={this.handleClick} />
-        <BurgerPane  burger={this.state.stack} />
+        <IngredientList allIngredients={this.state.ingredients} move={this.handleClick} />
+        <BurgerPane  burger={this.state.stack} clear={this.handleClear} />
       </div>
     )
   }

@@ -11,7 +11,7 @@ const BurgerPane = props => {
       </ul>
       <hr></hr>
       <span>Burger Stacking Area</span>
-      <button type="reset">Make New Burger</button>
+      <button type="reset" onClick={props.clear} >Make New Burger</button>
     </div>
   )
 }

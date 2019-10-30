@@ -3,7 +3,7 @@ import './App.css';
 
 const IngredientList = props => {
   var mappedIngredients = props.allIngredients.map((ingredient, id) => 
-    <li key={id}>{ingredient.name} <button name={ingredient.name} onClick={(e) => props.onClick(e, id)}> Go! </button></li>)
+    <li key={id}>{ingredient.name} <button name={ingredient.name} onClick={(e) => props.move(e, id)}> Go! </button></li>)
   return(
     <div className="ingredientList">
       <ul>
