@@ -3,22 +3,13 @@ import './App.css';
 
 const IngredientList = props => {
   var mappedIngredients = props.allIngredients.map((ingredient, id) => 
-    <li key={id}>{ingredient}</li>)
+    <li key={id}>{ingredient.name} <button>Add!</button></li>)
   return(
     <ul>
-      {mappedIngredients.name}
-      <buton>Add!</buton>
+      {mappedIngredients}
     </ul>
   )
 }
 
-// const IngredientList = props => (
-//   <div>
-//     <ul>
-//       <li>{props.allIngredients.name}</li>
-//       <button>Add</button>
-//     </ul>
-//   </div>
-// )
 
 export default IngredientList;

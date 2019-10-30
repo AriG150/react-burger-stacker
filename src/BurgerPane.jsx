@@ -6,7 +6,7 @@ class BurgerPane extends Component{
     return(
       <>
       <hr></hr>
-      <span>Burder Stacking Area</span>
+      <span>Burger Stacking Area</span>
       <button type="reset">Make New Burger</button>
       </>
     )
