@@ -28,7 +28,7 @@ class App extends Component{
   render(){
     return(
       <div className="App">
-        <IngredientList allIngredients={this.state.ingredients} move={this.handleClick} />
+        <IngredientList allIngredients={this.state.ingredients} moveIngredient={this.handleClick} />
         <BurgerPane  burger={this.state.stack} clear={this.handleClear} />
       </div>
     )

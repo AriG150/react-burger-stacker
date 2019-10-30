@@ -6,11 +6,12 @@ const BurgerPane = props => {
   // console.log(newBurger)
   return(
     <div className="burgerPane">
-      <ul>
+      <ul className="bulletpoint">
         {newBurger}
       </ul>
       <hr></hr>
       <span>Burger Stacking Area</span>
+      <br/>
       <button type="reset" onClick={props.clear} >Make New Burger</button>
     </div>
   )

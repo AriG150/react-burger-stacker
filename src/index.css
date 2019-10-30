@@ -15,3 +15,7 @@ code {
 .ingredientList, .burgerPane{
   display: inline-block
 }
+
+.bulletpoint{
+  list-style-type: none;
+}
